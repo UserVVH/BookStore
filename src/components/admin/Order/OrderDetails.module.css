@@ -1,0 +1,43 @@
+.orderDrawer :global(.ant-drawer-content-wrapper) {
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.drawerContent {
+  padding: 16px 0;
+}
+
+.titleIcon {
+  font-size: 24px;
+  color: #1890ff;
+}
+
+.descriptions {
+  margin-bottom: 24px;
+}
+
+.descriptions :global(.ant-descriptions-item-label) {
+  background-color: #fafafa;
+  width: 120px;
+}
+
+.itemsTitle {
+  margin: 24px 0 16px;
+  color: #1890ff;
+}
+
+.itemCard {
+  margin-bottom: 12px;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #ffffff, #f0f2f5);
+  transition: all 0.3s ease;
+}
+
+.itemCard:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.descriptions :global(.ant-descriptions-row) > th,
+.descriptions :global(.ant-descriptions-row) > td {
+  padding: 12px 16px;
+}

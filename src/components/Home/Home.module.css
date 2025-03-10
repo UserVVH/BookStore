@@ -1,0 +1,655 @@
+.container {
+  display: flex;
+  gap: 20px;
+  /* padding: 16px; */
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+.filterPanel {
+  flex: 0 0 190px;
+  border-radius: 4px;
+  /* padding: 1px; */
+  /* box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); */
+  /* width: 190px; */
+  height: fit-content;
+}
+
+.mainContent {
+  flex: 1;
+  border-radius: 4px;
+  /* padding: 16px; */
+  /* min-height: 600px; */
+  height: fit-content;
+}
+
+.filterHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 16px;
+}
+
+.filterHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filterTitle {
+  margin: 0 8px;
+  font-size: 14px;
+  /* font-weight: 500; */
+  font-weight: bold;
+}
+
+.filterGroup {
+  padding-top: 12px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.filterGroupHeader {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.filterOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.filterOption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterOption:hover {
+  color: #ee4d2d;
+}
+
+.selected {
+  background-color: #f0f0f0;
+}
+
+.filterLabel {
+  margin-left: 8px;
+  flex: 1;
+}
+
+.filterCount {
+  color: #999;
+  font-size: 12px;
+}
+
+.priceRangeInputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.priceInput {
+  width: 100%;
+}
+
+/* Override Ant Design's default styles if needed */
+.priceInput :global(.ant-input-number-input) {
+  text-align: left;
+  padding: 4px 8px;
+}
+
+.rangeLine {
+  width: 10px;
+  height: 1px;
+  background: #d9d9d9;
+}
+
+.applyButton {
+  width: 100%;
+  padding: 8px;
+  background: #1890ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.3s;
+}
+
+.applyButton:hover {
+  background: #096dd9;
+}
+
+.ratingStars {
+  font-size: 20px;
+  color: #ffce3d;
+  cursor: pointer;
+}
+
+.starEmpty {
+  color: #d8d8d8;
+}
+
+.resetIcon {
+  transition: transform 0.3s ease;
+}
+
+.resetIcon:hover {
+  transform: rotate(-45deg);
+}
+
+.sortBar {
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  background-color: #00000008;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.sortBarLeft {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.sortLabel {
+  color: #555555;
+  margin-right: 8px;
+  padding-bottom: 1px;
+}
+
+.sortOptions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pagination {
+  margin-left: auto;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 1px;
+}
+
+/* Optional: Add some responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .sortBar {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .pagination {
+    margin-left: 0;
+    align-self: flex-end;
+  }
+}
+
+/* Override Ant Design pagination styles to match your reference */
+:global(.ant-pagination-simple) {
+  height: 32px;
+}
+
+:global(.ant-pagination-simple .ant-pagination-prev),
+:global(.ant-pagination-simple .ant-pagination-next) {
+  height: 32px;
+  line-height: 32px;
+  border: 1px solid #e8e8e8;
+  border-radius: 2px;
+}
+
+:global(.ant-pagination-simple .ant-pagination-simple-pager) {
+  margin: 0 8px;
+}
+
+/* Override Ant Design button styles */
+.sortOptions :global(.ant-btn) {
+  height: 34px;
+  border-radius: 2px;
+}
+
+/* .sortOptions :global(.ant-btn-primary) {
+  background-color: #ee4d2d;
+} */
+
+.priceDropdown {
+  padding: 0;
+  margin-top: -8px !important;
+}
+
+/* Optional: If you want to remove the default box-shadow gap */
+.priceDropdown :global(.ant-select-dropdown-content) {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.priceButton {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.arrowIcons {
+  display: flex;
+  flex-direction: column;
+  font-size: 8px;
+  line-height: 1;
+}
+
+.sortOptions .ant-select {
+  margin-left: 8px;
+}
+
+.sortOptions .ant-select-selector {
+  height: 32px !important;
+  padding: 0 11px !important;
+}
+
+.sortOptions .ant-select-selection-item {
+  line-height: 30px !important;
+}
+
+:global(.ant-select-dropdown) {
+  min-width: 200px !important;
+}
+
+.selectWrapper {
+  cursor: pointer;
+}
+
+.customSelect {
+  position: relative;
+  width: 200px;
+  user-select: none;
+}
+
+.selectTrigger {
+  padding: 4px 11px;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 32px;
+}
+
+.selectTrigger:hover {
+  border-color: #40a9ff;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% - 1px);
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 0 0 2px 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.option {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #f5f5f5;
+}
+
+.arrowIcons {
+  display: flex;
+  flex-direction: column;
+  font-size: 8px;
+  line-height: 1;
+  color: #999;
+}
+
+.blackPlaceholder :global(.ant-select-selection-placeholder) {
+  color: black !important;
+}
+
+.productGridWrapper {
+  border-radius: 4px;
+  min-height: 200px; /* Ensures there's space for the spinner when no items are present */
+  position: relative;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Always 5 columns */
+  gap: 16px;
+  width: 100%;
+}
+
+.productItem {
+  width: 100%;
+  min-width: 0; /* Prevents overflow */
+}
+
+.productCard {
+  width: 100%;
+  height: 100%;
+}
+
+.productImageWrapper {
+  position: relative;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  width: 100%;
+}
+
+.productImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  height: 108px; /* Fixed height for the info container */
+}
+
+.productName {
+  flex: 1;
+  font-size: 0.875rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 2.4em;
+  cursor: pointer;
+}
+
+.productPrice {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ee4d2d;
+  margin-bottom: 8px;
+}
+
+.productFooter {
+  margin-top: auto; /* Push footer to bottom */
+}
+
+.productStats {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.statsDelimiter {
+  color: #ccc;
+  margin: 0 4px;
+}
+
+.ratingContainer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.soldCount {
+  color: #767676;
+  font-size: 0.875rem;
+}
+
+.starIcon {
+  display: inline-block;
+}
+
+.ratingNumber {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 12px;
+  line-height: 14px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+  .productGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .productGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .productGridWrapper {
+    padding: 12px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .productGridWrapper {
+    padding: 8px;
+  }
+}
+
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.customPagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Style for all pagination items including arrows */
+.customPagination :global(.ant-pagination-item),
+.customPagination :global(.ant-pagination-prev .ant-pagination-item-link),
+.customPagination :global(.ant-pagination-next .ant-pagination-item-link) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  transition: all 0.3s;
+}
+
+/* Style for page numbers */
+.customPagination :global(.ant-pagination-item a) {
+  color: #262626;
+  font-size: 16px;
+  padding: 0;
+}
+
+/* Active page style */
+.customPagination :global(.ant-pagination-item-active) {
+  background-color: #1890ff;
+}
+
+.customPagination :global(.ant-pagination-item-active a) {
+  color: white;
+}
+
+/* Arrow icons style */
+.customPagination :global(.ant-pagination-prev .anticon),
+.customPagination :global(.ant-pagination-next .anticon) {
+  font-size: 16px;
+  color: #262626;
+}
+
+/* Hover effects */
+.customPagination :global(.ant-pagination-item:hover),
+.customPagination :global(.ant-pagination-prev:hover .ant-pagination-item-link),
+.customPagination
+  :global(.ant-pagination-next:hover .ant-pagination-item-link) {
+  background-color: #f0f0f0;
+}
+
+.customPagination :global(.ant-pagination-item-active:hover) {
+  background-color: #1890ff;
+}
+
+/* Disabled state */
+.customPagination :global(.ant-pagination-disabled .ant-pagination-item-link) {
+  background: transparent !important;
+}
+
+.customPagination :global(.ant-pagination-disabled .anticon) {
+  color: #d9d9d9;
+}
+
+/* Add these new styles while keeping your existing CSS */
+
+@media (max-width: 768px) {
+  .filterPanel {
+    margin-bottom: 16px;
+  }
+
+  .sortBar {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .sortOptions {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .productName {
+    font-size: 14px;
+    -webkit-line-clamp: 2;
+  }
+
+  .productPrice {
+    font-size: 16px;
+  }
+
+  .productStats {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sortBarLeft {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .sortLabel {
+    margin-bottom: 8px;
+  }
+
+  .pagination {
+    width: 100%;
+    justify-content: center;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sortBar > div {
+    margin-bottom: 12px;
+  }
+
+  .sortBar > div:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.paginationWrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 90px; /* Ensure minimum width for pagination */
+}
+
+.pagination {
+  white-space: nowrap; /* Prevent pagination from breaking into multiple lines */
+}
+
+/* Override Ant Design's pagination styles to prevent breaking */
+.pagination :global(.ant-pagination-simple) {
+  display: flex;
+  align-items: center;
+}
+
+.pagination :global(.ant-pagination-simple-pager) {
+  margin: 0 8px;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .paginationWrapper {
+    justify-content: center;
+    margin-top: 12px;
+  }
+
+  .sortBarLeft {
+    justify-content: center;
+  }
+
+  /* Ensure pagination stays centered and intact on mobile */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.categoryCheckboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.categoryOption {
+  margin: 0;
+  padding: 4px 0;
+}
+
+.categoryOption :global(.ant-checkbox-wrapper) {
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+}
+
+.categoryOption:hover :global(.ant-checkbox-wrapper) {
+  color: #1890ff;
+}
+
+/* Optional: If you want to customize the spinning indicator */
+:global(.ant-spin-nested-loading) {
+  width: 100%;
+}

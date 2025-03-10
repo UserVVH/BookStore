@@ -1,0 +1,219 @@
+.container {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pageTitle {
+  margin-bottom: 32px !important;
+  padding-left: 8px;
+  border-left: 4px solid #1890ff;
+}
+
+.tableContainer {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.tableHeader {
+  display: none;
+  padding: 16px 24px;
+  background: #fafafa;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.tableHeader [class*="ant-col"] {
+  text-align: left;
+}
+
+.tableHeader [class*="ant-col"]:last-child {
+  text-align: center;
+}
+
+.orderList {
+  background: #fff;
+}
+
+.orderItem {
+  padding: 16px 24px !important;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #f0f0f0 !important;
+}
+
+.orderItem:last-child {
+  border-bottom: none !important;
+}
+
+.orderItem:hover {
+  background-color: #fafafa;
+}
+
+.orderContent {
+  width: 100%;
+}
+
+.orderNumber {
+  font-family: monospace;
+  font-size: 14px;
+  color: #8c8c8c;
+}
+
+.orderId {
+  font-family: monospace;
+  font-size: 14px;
+  color: #262626;
+  display: block;
+}
+
+.timeInfo {
+  line-height: 1.2;
+}
+
+.date {
+  font-size: 14px;
+  color: #262626;
+}
+
+.time {
+  font-size: 13px;
+}
+
+.totalAmount {
+  display: block;
+  color: #1890ff;
+  font-size: 15px;
+}
+
+.statusTag {
+  display: inline-block;
+  min-width: 90px;
+  text-align: center;
+  padding: 4px 12px;
+}
+
+.actionsColumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detailsButton {
+  min-width: 100px;
+}
+
+.mobileSummary {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.desktopLayout {
+  display: none;
+}
+
+.mobileLayout {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .desktopLayout {
+    display: flex;
+  }
+
+  .mobileLayout {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .tableHeader {
+    display: flex;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+
+  .tableContainer {
+    border-radius: 4px;
+  }
+
+  .tableHeader {
+    padding: 12px 16px;
+  }
+
+  .orderItem {
+    padding: 12px 16px !important;
+  }
+
+  .statusTag {
+    min-width: 80px;
+  }
+
+  .detailsButton {
+    width: 100%;
+    margin-top: 8px;
+  }
+}
+
+/* Keep existing modal styles ... */
+
+.mobileAmountStatus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.amountWrapper,
+.statusWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.orderInfo {
+  width: 100%;
+}
+
+.modalSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.productListTitle {
+  margin-bottom: 16px !important;
+}
+
+.productItem {
+  padding: 16px !important;
+  background-color: #fafafa;
+  border-radius: 8px;
+  margin-bottom: 8px !important;
+}
+
+.productInfo {
+  width: 100%;
+}
+
+.modalFooter {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.totalSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

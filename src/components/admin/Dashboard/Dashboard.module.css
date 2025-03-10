@@ -1,0 +1,121 @@
+.dashboard {
+  min-height: 100vh;
+  padding: 24px;
+  position: relative;
+  background: linear-gradient(135deg, #1a237e 0%, #0d1117 100%);
+  overflow: hidden;
+}
+
+.backgroundPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 50% 50%,
+      rgba(37, 88, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 0% 0%,
+      rgba(255, 215, 0, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 100% 100%,
+      rgba(255, 87, 34, 0.05) 0%,
+      transparent 50%
+    );
+  background-size: 100% 100%, 50% 50%, 50% 50%;
+  animation: backgroundMove 20s ease-in-out infinite;
+  z-index: 0;
+}
+
+.statsCard {
+  position: relative;
+  backdrop-filter: blur(10px);
+  background: rgba(21, 31, 48, 0.7) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cardContent {
+  position: relative;
+  padding: 20px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.02)
+  );
+  border-radius: 15px;
+}
+
+.cardContent::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  padding: 2px;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 215, 0, 0.5),
+    transparent
+  );
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+}
+
+.statsCard:hover {
+  transform: translateY(-5px) scale(1.02);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(255, 215, 0, 0.2),
+    0 0 30px rgba(37, 88, 255, 0.2);
+}
+
+.cardTitle {
+  color: #ffd700;
+  font-size: 1.2em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.cardIcon {
+  font-size: 28px;
+  background: linear-gradient(45deg, #ffd700, #ff9d00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 10px;
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.5));
+}
+
+.statistic :global(.ant-statistic-content) {
+  display: flex;
+  align-items: center;
+}
+
+.statistic :global(.ant-statistic-content-value) {
+  color: #ffffff;
+  font-size: 2.8em;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 0 0 20px rgba(37, 88, 255, 0.5);
+  background: linear-gradient(45deg, #ffffff, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Card-specific styles */
+.usersCard .cardContent::after {
+  content: "";
+}

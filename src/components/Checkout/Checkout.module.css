@@ -1,0 +1,349 @@
+/* Base styles - Mobile First */
+.container {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  padding-bottom: 60px; /* Space for fixed footer */
+}
+
+.section {
+  position: relative;
+  background: #fff;
+  margin-bottom: 8px;
+  padding: 12px;
+}
+
+/* Address Section */
+.addressHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.locationIcon {
+  fill: #ee4d2d;
+}
+
+.addressInfo {
+  font-size: 14px;
+}
+
+.name {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.address {
+  color: #222;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.tag {
+  color: #0046ab;
+  font-size: 12px;
+}
+
+/* Shop & Product Section */
+.shopInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.shopName {
+  flex: 1;
+  font-weight: 500;
+}
+
+.product {
+  display: flex;
+  padding: 12px 0;
+  gap: 12px;
+}
+
+.product img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.productDetails {
+  flex: 1;
+}
+
+.productName {
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.priceInfo {
+  margin-top: 8px;
+  padding: 8px;
+  background-color: #fafafa;
+  border-radius: 4px;
+}
+
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.priceRow:last-child {
+  margin-bottom: 0;
+}
+
+.priceLabel {
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.priceValue {
+  font-weight: 500;
+  color: #333;
+}
+
+.message {
+  padding-top: 12px;
+  border-top: 1px solid #f5f5f5;
+}
+
+/* Shipping Section */
+.shippingHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.shippingInfo {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.shippingPrice {
+  color: #ee4d2d;
+  margin-top: 4px;
+}
+
+/* Payment Section */
+.paymentMethod {
+  width: 100%;
+  text-align: left;
+  padding: 8px 12px;
+  border: 1px solid #d8d8d8;
+  background: #fff;
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+/* Price Details */
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  color: #ee4d2d;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 8px 12px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.terms {
+  font-size: 12px;
+  color: #757575;
+  margin-bottom: 8px;
+}
+
+.terms a {
+  color: #05a;
+  margin-left: 4px;
+}
+
+.orderButton {
+  width: 100%;
+  background: #ee4d2d;
+  border: none;
+  height: 40px;
+  font-size: 14px;
+  transition: background-color 0.2s ease; /* Add smooth transition */
+}
+
+.orderButton:hover {
+  background-color: #d93c1f !important; /* Darker shade of the original color */
+  cursor: pointer;
+}
+
+/* Tablet and above - Only add necessary changes */
+@media (min-width: 768px) {
+  .container {
+    padding: 20px;
+    padding-bottom: 80px;
+  }
+
+  .section {
+    max-width: 600px;
+    margin: 0 auto 12px;
+    border-radius: 4px;
+  }
+
+  .footer {
+    padding: 12px;
+  }
+
+  .orderButton {
+    width: auto;
+    min-width: 200px;
+    float: right;
+  }
+}
+
+/* Desktop - Only add necessary changes */
+@media (min-width: 1024px) {
+  .container {
+    padding: 20px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section {
+    max-width: 1000px;
+    padding: 20px;
+  }
+
+  .addressInfo {
+    font-size: 16px;
+  }
+
+  .name {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .address {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+
+  .tag {
+    font-size: 14px;
+  }
+
+  .shopName {
+    font-size: 18px;
+  }
+
+  .productName {
+    font-size: 16px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+
+  .product img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .priceInfo {
+    /* font-size: 16px; */
+    font-size: 21px;
+  }
+
+  .shippingInfo {
+    font-size: 16px;
+  }
+
+  .priceRow {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .totalRow {
+    font-size: 18px;
+  }
+
+  .terms {
+    /* font-size: 14px; */
+    font-size: 19px;
+  }
+
+  .orderButton {
+    font-size: 16px;
+    height: 44px;
+  }
+}
+
+.addressInput {
+  margin: 8px 0;
+  width: 100%;
+}
+
+.headerIcon {
+  font-size: 20px;
+  margin-right: 8px;
+  color: #1890ff;
+}
+
+.termsIcon {
+  font-size: 16px;
+  margin-right: 4px;
+  color: #52c41a;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* Update existing headers to use flex */
+.addressHeader,
+.shippingHeader,
+.paymentHeader {
+  display: flex;
+  align-items: center;
+}
+
+.gradientLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #6fa6d6,
+    #6fa6d6 33px,
+    transparent 0,
+    transparent 41px,
+    #f18d9b 0,
+    #f18d9b 74px,
+    transparent 0,
+    transparent 82px
+  );
+  background-position-x: -30px;
+  background-size: 116px 3px;
+  height: 3px;
+}

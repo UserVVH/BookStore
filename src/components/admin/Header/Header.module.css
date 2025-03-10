@@ -1,0 +1,34 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  /* background-color: #f0f2f5; */
+  background-color: #f0f5ff;
+
+  height: 64px;
+}
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.userSection {
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.welcomeText {
+  font-size: 18px; /* Kích thước văn bản có thể tùy chỉnh */
+}
+
+.customAvatar {
+  width: 40px; /* Kích thước rộng */
+  height: 40px; /* Kích thước cao */
+  font-size: 20px; /* Kích thước icon bên trong avatar */
+}
+
+.largeMenuItem {
+  font-size: 17px !important; /* Tăng kích thước chữ */
+  line-height: 24px !important; /* Căn chỉnh chiều cao cho phù hợp */
+}

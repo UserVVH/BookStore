@@ -1,0 +1,112 @@
+.form {
+  max-width: 100%;
+  padding: 20px 0;
+}
+
+.avatarSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.avatar {
+  border: 2px solid #f0f0f0;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.desktopLayout {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  .accountModal {
+    min-width: 600px;
+  }
+
+  .form {
+    padding: 24px 0;
+  }
+
+  .avatarSection {
+    margin-bottom: 32px;
+  }
+
+  .formFields {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .accountModal {
+    min-width: 800px;
+  }
+
+  .desktopLayout {
+    flex-direction: row;
+    gap: 48px;
+    align-items: flex-start;
+  }
+
+  .avatarSection {
+    flex-shrink: 0;
+    margin-bottom: 0;
+    width: 200px;
+  }
+
+  .formFields {
+    flex: 1;
+    max-width: none;
+    margin: 0;
+  }
+
+  .form {
+    padding: 32px 0;
+  }
+
+  /* Hover effects for desktop */
+  .avatar:hover {
+    border-color: #1890ff;
+    transition: border-color 0.3s ease;
+  }
+
+  /* Enhanced button styles for desktop */
+  :global(.ant-btn) {
+    transition: all 0.3s ease;
+  }
+
+  :global(.ant-btn:hover) {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .avatar {
+    border-color: #303030;
+  }
+
+  @media (min-width: 1024px) {
+    .avatar:hover {
+      border-color: #177ddc;
+    }
+  }
+}
+
+.previewMask {
+  border-radius: 50%;
+}
+
+.uploadButtons {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  justify-content: center;
+}
